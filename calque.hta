@@ -1,0 +1,67 @@
+<head>
+<title>Calque</title>
+<HTA:APPLICATION ID="calque"
+   applicationName="calque"
+    MAXIMIZEBUTTON="no"
+    MINIMIZEBUTTON="no"
+    NAVIGATABLE="no"
+    icon="favicon.bmp"
+    SCROLL="yes"
+    SCROLLFLAT="no"
+    SELECTION="no"
+    SHOWINTASKBAR="yes"
+    SINGLEINSTANCE="yes"
+    SYSMENU="yes"
+    WINDOWSTATE="normal" 
+>
+
+    <meta http-equiv="x-ua-compatible" content="ie=9" />
+
+    <SCRIPT LANGUAGE="VBScript">
+
+    Sub doResize
+    	w = 1000
+    	h = 400
+        window.moveTo (screen.availWidth - w)/2, (screen.availHeight - h)/2
+        window.resizeTo w, h
+    End Sub 
+    
+    Sub document_OnKeyUp()
+        intKeyCode = window.event.keycode
+        If intKeyCode = 27 Then window.Close
+    End Sub
+    
+    doResize()
+
+</SCRIPT>
+
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" language="JavaScript" src="math.min.js"></script>
+    <script type="text/javascript" language="JavaScript" src="lodash.min.js"></script>
+    <script type="text/javascript" language="JavaScript" src="calque.js"></script>
+
+    <script>
+        window.onload = function () {
+            var input = document.getElementById('input');
+            var output = document.getElementById('output');
+            window.calque = new Calque(input, output);
+            input.select();
+        }
+    </script>
+
+
+</head>
+
+
+
+
+
+<body>
+
+    <div class="interface">
+        <div class="output" id="output"></div>
+        <textarea class="input" id="input"></textarea>
+    </div>
+
+</body>
+</html>
