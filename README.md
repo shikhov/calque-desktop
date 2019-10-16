@@ -1,5 +1,5 @@
 # calque-desktop
-Portable desktop version of Calque
+Portable desktop version of Calque (for Windows)
 
 # Improvements
 - Bigger font size
