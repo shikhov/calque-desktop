@@ -1,7 +1,7 @@
 # calque-desktop
 Portable desktop version of Calque (for Windows)
 
-# Improvements
+# Changes
 - Bigger font size
 - Centered window
 - Esc to exit
